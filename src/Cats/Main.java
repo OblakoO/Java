@@ -40,7 +40,7 @@ public class Main {
                 //System.out.println(Colorcat.getRandom().name());
             }
            // System.out.println("Cats color is "+catList.get(i).getColor());
-            catList.get(i).CatsMeal(catList.get(i).getColor());
+            catList.get(i).CatsMeal();
 
         }
         //for (int i =0; i<catList.size(); i++){

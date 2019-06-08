@@ -37,7 +37,7 @@ public class Cat {
     }
 
     public int getAge() {
-        age = (int)Math.random()*12+1;
+        age = (int)(Math.random()*12+1);
         return age;
     }
 
@@ -58,18 +58,23 @@ public class Cat {
         return "name: "+ getName()+"; "+"age: "+getAge();
     }
 
-    public void CatsMeal(Colorcat color){
+    public void CatsMeal(){
         switch (color){
             case BLACK:
                 System.out.println("Diet");
+                break;
             case GREEN:
                 System.out.println("Eat all");
+                break;
             case BROWN:
                 System.out.println("Eat only apples");
+                break;
             case WHITE:
                 System.out.println("Nothing");
+                break;
             case ORANGE:
                 System.out.println("Eat fruits");
+                break;
         }
     }
 }
