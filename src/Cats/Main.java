@@ -4,9 +4,14 @@ import java.awt.*;
 import java.util.ArrayList;
 
 /**
- * Задание: пройтись по всей коллекции котов. для котов с четной итерацией присвоить любой цвет
- * для нечетной итерации - другой цвет
- * придумать еще одно условие. если оно выполняется, то присваивать РАНДОМНЫЙ цвет из енума {@link Colorcat}
+ * Задание: в зависимости от цвета, присваивать котам разный тип питания.
+ * ну там сделай какое-нибудь подходящее для этого поле.
+ * tip: switch-case
+ * и надо будет потренировать цикл foreach
+ * потренируйся выводить форичем какую-то информацию о коте.
+ * если он белый, ты выводишь имя
+ * если его возраст >4, ты выводишь цвет
+ * ну и почитай про set и map, HashSet, HashMap
  */
 public class Main {
     public static void main(String[] args) {
@@ -20,17 +25,28 @@ public class Main {
             System.out.println(catList.get(i));
         }
         for (int i = 0; i < catList.size(); i++) {
-            if (i % 2 == 0) {
+            if ((i+1) % 2 == 0 && (i+1)%5!=0) {
                 catList.get(i).setColor(Colorcat.BLACK);
-                //System.out.println(catList.get(i));
+                System.out.println(i+1+" "+catList.get(i).getColor());
                 //System.out.println(Colorcat.BLACK.name());
             }
-            if (i % 2 == 1) {
+            if ((i+1) % 2 == 1&&(i+1)%5!=0) {
                 catList.get(i).setColor(Colorcat.GREEN);
+                System.out.println(i+1+" "+catList.get(i).getColor());
             }
-            if (i % 5 == 0) {
+            if ((i+1) % 5 == 0) {
                 catList.get(i).setColor(Colorcat.getRandom());
+                System.out.println(i+1+" "+catList.get(i).getColor());
+                //System.out.println(Colorcat.getRandom().name());
             }
+           // System.out.println("Cats color is "+catList.get(i).getColor());
+            catList.get(i).CatsMeal(catList.get(i).getColor());
+
         }
+        //for (int i =0; i<catList.size(); i++){
+
+            //catList.get(i).CatsMeal(Colorcat.);
+
+       // }
     }
 }
