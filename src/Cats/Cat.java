@@ -1,6 +1,7 @@
 package Cats;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
 
 public class Cat {
@@ -8,6 +9,7 @@ public class Cat {
     private int age;
     private Colorcat color;
     private String catblabla;
+    private Date date;
 
     public Cat(){//конструктор без параметров
 
@@ -40,6 +42,13 @@ public class Cat {
         age = (int)(Math.random()*12+1);
         return age;
     }
+    public Date getDate(){
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public String getName() {
         return name;
@@ -55,7 +64,14 @@ public class Cat {
 
     @Override
     public String toString() {
-        return "name: "+ getName()+"; "+"age: "+getAge();
+        return "name: "+ getName()+"; "+"age: "+getAge()+ ": color: "+getColor();
+    }
+
+    public Cat(String name, int age, Colorcat color, String catblabla) {
+        this.name = name;
+        this.age = age;
+        this.color = color;
+        this.catblabla = catblabla;
     }
 
     public void CatsMeal(){
@@ -76,5 +92,13 @@ public class Cat {
                 System.out.println("Eat fruits");
                 break;
         }
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
